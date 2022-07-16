@@ -2,12 +2,12 @@
 <div class="button">Reserva tu consulta</div>
 </template>
 
-<style>
+<style lang="scss">
 .button{
     padding-top: 5%;
 border-radius: 5px;
 background-color: #f9b0be;
-color: aliceblue;
+color: $clearColor;
 height: 60px;
 width: 130px;
 font-size: 16px;
@@ -19,7 +19,7 @@ align-content: center;
 }
 
 .button:hover{
-    background-color: #e7b4bd;
+    background-color: $darkColor;
 }
 </style>
 

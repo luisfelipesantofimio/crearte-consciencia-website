@@ -30,7 +30,7 @@
   </div>
 </template>
 
-<style>
+<style lang="scss">
 img {
   padding-right: 30px;
   width: 200px;
@@ -39,31 +39,33 @@ img {
   padding: 10px;
   float: center;
   width: 100%;
-  background-color: #60929b;
+  background-color: $mainColor;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   overflow: hidden;
-}
-.myNav a {
-  float: left;
-  text-align: center;
-  padding-right: 20px;
-  padding-right: 20px;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 18px;
-  font-weight: bold;
-  color: aliceblue;
-  text-decoration: none;
-  display: block;
+
+  a {
+    float: left;
+    text-align: center;
+    padding-right: 20px;
+    padding-right: 20px;
+    font-family: $globalFont;
+    font-size: 18px;
+    font-weight: bold;
+    color: $clearColor;
+    text-decoration: none;
+    display: block;
+  }
 }
 
 a:hover {
-  color: #f9b0be;
+  color: $secundaryColor;
 }
-.active {
-  color: #f9b0be;
+a.nuxt-link-exact-active {
+  color: $secundaryColor;
+  font-weight: bold;
 }
 
 .dropdown {
@@ -71,38 +73,36 @@ a:hover {
   justify-content: center;
   align-content: center;
   padding-right: 14px;
+  .dropdown-btn {
+    color: $clearColor;
+    font-family: $globalFont;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  .dropdown-btn:hover {
+    color: $secundaryColor;
+  }
 }
 
-.dropdown .dropdown-btn {
-  color: aliceblue;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 18px;
-  font-weight: bold;
+.dropdown:hover {
+  .dropdown-content {
+    display: block;
+    color: $secundaryColor;
+  }
 }
-
-.dropdown .dropdown-btn:hover {
-  color: #f9b0be;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-  color: #f9b0be;
-}
-
 .dropdown-content {
   padding: 10px;
   display: none;
   position: absolute;
   z-index: 1;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.385);
   background-color: rgb(73, 75, 77);
   border-radius: 10px;
-}
-
-.dropdown-content a {
-  float: none;
-  text-align: left;
-  padding: 5px;
+  a {
+    float: none;
+    text-align: left;
+    padding: 5px;
+  }
 }
 
 .btnArea {

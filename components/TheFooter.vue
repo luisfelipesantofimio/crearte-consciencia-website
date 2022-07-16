@@ -28,7 +28,9 @@
           <div class="navElements">
             <nuxt-link to="/personas"><p>Personas</p></nuxt-link>
             <nuxt-link to="/organizaciones"><p>Organizaciones</p></nuxt-link>
-            <nuxt-link to="/desarrollo-social"><p>Desarrollo social</p></nuxt-link>
+            <nuxt-link to="/desarrollo-social"
+              ><p>Desarrollo social</p></nuxt-link
+            >
             <nuxt-link to="#"><p>Miembros</p></nuxt-link>
           </div>
         </div>
@@ -47,86 +49,88 @@
   </div>
 </template>
 
-<style>
+<style lang="scss">
 .container {
-  background-color: #141519;
+  background-color: $footerBackground;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
   padding-bottom: 2rem;
+
+  h1 {
+    text-align: center;
+  }
+
+  p {
+    font-family: $globalFont;
+    font-size: 15px;
+    padding-top: 5px;
+  }
+
+  a {
+    font-family: $globalFont;
+    font-size: 15px;
+    padding-top: 5px;
+  }
 }
 
-h1 {
-  text-align: center;
+.mainTitle {
+  h1 {
+    color: #57838b;
+    text-align: center;
+    font-size: 25px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    justify-items: center;
+    margin: 20px;
+    margin-top: 50px;
+  }
 }
 
-p{
-  font-family: "Montserrat";
-  font-size: 15px;
-  padding-top: 5px;
-}
+.iconsRow {
+  i {
+    align-items: center;
+    flex-direction: row;
+    color: aliceblue;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    transition: 0.5s;
+  }
 
-a{
-  font-family: "Montserrat";
-  font-size: 15px;
-  padding-top: 5px;
-}
-
-.mainTitle h1 {
-  color: #57838b;
-  text-align: center;
-  font-size: 25px;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: bold;
-  justify-items: center;
-  margin: 20px;
-  margin-top: 50px;
-}
-
-.iconsRow i {
-  align-items: center;
-  flex-direction: row;
-  color: aliceblue;
-  padding: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
-  transition: 0.5s;
-}
-.iconsRow i:hover {
-  color: #f9b0be;
+  i:hover {
+    color: #f9b0be;
+  }
 }
 
 .footerContainer {
   padding: 20px;
   padding-top: 8rem;
-}
+  .footerElements {
+    display: flex;
+    flex-direction: row;
+    .footerNav {
+      flex-direction: column;
+      padding-left: 50px;
+      .navTitle p {
+        color: #57838b;
+        font-size: 20px;
+        font-weight: bold;
+      }
+      .navElements a {
+        color: aliceblue;
+        transition: 0.5s;
+      }
 
-.footerElements {
-  display: flex;
-  flex-direction: row;
-}
-
-.footerLogo img {
-  width: 250px;
-}
-.footerNav {
-  flex-direction: column;
-  padding-left: 50px;
-}
-.navTitle p{
-  color: #57838b;
-  font-size: 20px;
-  font-weight: bold;
-}
-.navElements a{
-  color: aliceblue;
-  transition: 0.5s;
-}
-
-.navElements a:hover{
-  color: #f9b0be;
+      .navElements a:hover {
+        color: #f9b0be;
+      }
+    }
+  }
+  .footerLogo img {
+    width: 250px;
+  }
 }
 </style>
 
