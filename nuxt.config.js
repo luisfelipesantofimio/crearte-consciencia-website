@@ -60,7 +60,8 @@ export default {
       families: {
         Montserrat: {
           wght: [100, 400],
-          ital: [100]
+          ital: [100],
+          bold: [100, 400]
         },
       }
     },
