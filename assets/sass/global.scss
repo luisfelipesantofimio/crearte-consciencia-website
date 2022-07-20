@@ -57,15 +57,18 @@
 @mixin featuresGrid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 50px
+    gap: 50px;
+    justify-content: center;
+    align-content: center;
     
 }
 
-@mixin featuresGridElement($iconColor){
+@mixin featuresGridElement() {
     @include globalTexts();
-    i{
-        color: $iconColor;
-    }
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    
 }
 
 /* customText mixin is suposed to be used with the bodyContentMainMixin */
@@ -85,7 +88,7 @@
     font-family: $globalFont;
 
     h1 {
-        font-size: 30px;
+        font-size: 27px;
         font-weight: bold;
     }
 

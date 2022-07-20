@@ -72,12 +72,65 @@
       <div><img src="~/assets/img/index_img/hug.png" alt="" /></div>
     </div>
     <section class="gridContainer">
-      <div>1</div>
-      <div>2</div>
-      <div>3</div>
-      <div>1</div>
-      <div>2</div>
-      <div>3</div>
+      <div>
+        <i class="fa-solid fa-dollar-sign fa-3x" style="color: #85bc27"></i>
+        <h1>Accesibilidad</h1>
+        <p>
+          La salud mental es un derecho de todos, sin importar las condiciones
+          socioeconómicas particulares. Brindamos precios justos y asequibles
+          para toda la población.
+        </p>
+      </div>
+      <div>
+        <i
+          class="fa-solid fa-hand-holding-hand fa-3x"
+          style="color: #f9b0be"
+        ></i>
+        <h1>Cobertura incomparable</h1>
+        <p>
+          No importa cuánto dure tu proceso, siempre estaremos a tu lado. Accede
+          a todos los beneficios porque te cuidamos de inicio a fin.
+        </p>
+      </div>
+      <div>
+        <i
+          class="fa-solid fa-face-smile-beam fa-3x"
+          style="color: rgb(157, 225, 239)"
+        ></i>
+        <h1>Salud para todos</h1>
+        <p>
+          Proporcionamos servicios de salud mental para personas naturales y
+          organizaciones. La salud mental debe ser la nueva normalidad.
+        </p>
+      </div>
+      <div>
+        <i class="fa-solid fa-calendar-check fa-3x" style="color: #ffbc63"></i>
+        <h1>Responsabilidad social</h1>
+        <p>
+          Llegamos a las poblaciones más vulnerables planificando e
+          implementando proyectos sociales enfocados en la promoción de la salud
+          mental.
+        </p>
+      </div>
+      <div>
+        <i
+          class="fa-solid fa-person-circle-check fa-3x"
+          style="color: #60929b"
+        ></i>
+        <h1>Nos preocupamos por ti</h1>
+        <p>
+          Proporcionamos una sesión gratuita de valoración tras seis meses de
+          finalizado tu proceso. Deseamos conocer tu evolución.
+        </p>
+      </div>
+      <div>
+        <i class="fa-solid fa-house-laptop fa-3x" style="color: #b27ce7"></i>
+        <h1>Comodidad</h1>
+        <p>
+          Desde la comodidad de tu hogar o en el consultorio. En tu horario
+          preferido. No hay excusas para darle un espacio a tu salud.
+        </p>
+      </div>
     </section>
   </div>
 </template>
@@ -162,7 +215,11 @@
   background: white;
   width: 100%;
   justify-content: center;
-  align-items: center;
+  align-content: center;
+  padding: 70px 200px 70px 200px;
+  div {
+    @include featuresGridElement;
+  }
 }
 </style>
 
