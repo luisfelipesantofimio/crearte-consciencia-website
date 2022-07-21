@@ -71,6 +71,44 @@
     
 }
 
+/* The classes below this line must be used at the end of the page body and after the global footer */
+
+@mixin pageFooter {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    height: 350px;
+    width: 100%;
+    background-color: black;
+
+    h1 {
+        color: $clearColor;
+        font-size: 50px;
+        font-weight: bold;
+        width: 70%;
+        text-align: left;
+    }
+
+    p {
+        font-size: 20px;
+        color: $clearColor;
+        width: 80%;
+    }
+    div{
+        align-content: center;
+        justify-items: center;
+    }
+}
+
+@mixin pageFooterElement{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
 
 
 /* customText mixin is suposed to be used with the bodyContentMainMixin */
