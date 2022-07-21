@@ -168,6 +168,23 @@
         </div>
       </div>
     </section>
+    <section class="pageFooter">
+      <div class="element1">
+        <h1>Da el primer paso, piensa en ti.</h1>
+      </div>
+      <div class="callToActionContainer">
+        <p>
+          La salud mental es un asunto de todos. Trabajamos para dar salud mental
+          de calidad, accesible y efectiva, sin embargo, todo depende de ti.
+          Desde tomar la decisión de buscar terapia, hasta la adherencia a tu
+          tratamiento, tú eres la clave en el desarrollo de tu salud mental ¿Qué
+          esperas?
+        </p>
+        <button>
+          <nuxt-link to="/contacto">Contáctanos</nuxt-link>
+        </button>
+      </div>
+    </section>
   </div>
 </template>
 
@@ -289,7 +306,30 @@
     width: $title-width;
     border-radius: 30px;
   }
+}
 
+.pageFooter {
+  align-items: center;
+  justify-items: center;
+  @include pageFooter();
+  p {
+    padding-left: 20px;
+    padding-bottom: 30px;
+  }
+  .callToActionContainer {
+    border-left: 2px;
+    border-color: $secundaryColor;
+    border-style: solid;
+    @include pageFooterElement();
+  }
+  .element1 {
+    @include pageFooterElement();
+  }
+  button {
+    @include goToButton();
+    width: 200px;
+    height: 30px;
+  }
 }
 </style>
 
