@@ -132,6 +132,42 @@
         </p>
       </div>
     </section>
+    <section class="containerSix">
+      <h1>Nuestros servicios</h1>
+      <div class="servicesContainer">
+        <div>
+          <div>
+            <h1 class="titleBackground1">Personas</h1>
+            <p>
+              Nuestra especialidad es brindar acompañamiento psicológico a
+              personas como tú, que buscan mayor bienestar psicológico, una
+              transformación en sus vidas o simplemente iniciar el maravilloso
+              camino del autoconocimiento. Tú eres nuestra mayor motivación y
+              trabajamos para que cada día seas más auténtico y te acerques más
+              a tu mejor versión.
+            </p>
+            <button>
+              <nuxt-link to="/personas">Ir a personas</nuxt-link>
+            </button>
+          </div>
+        </div>
+        <div>
+          <div>
+            <h1 class="titleBackground2">Organizaciones</h1>
+            <p>
+              Desde empresas hasta colegios, pasando por universidades, locales,
+              y todo espacio que confiera un grupo o equipo de trabajo. La salud
+              mental de las personas que integran dichas organizaciones se
+              convierte en una forma de empoderamiento y cambio. ¿Deseas ser
+              parte de la transformación de tu organización?
+            </p>
+            <button>
+              <nuxt-link to="/organizaciones">Ir a organizaciones</nuxt-link>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
   </div>
 </template>
 
@@ -211,6 +247,7 @@
 }
 
 .gridContainer {
+  color: $darkColor;
   @include featuresGrid();
   background: white;
   width: 100%;
@@ -220,6 +257,39 @@
   div {
     @include featuresGridElement;
   }
+}
+
+.containerSix {
+  color: $darkColor;
+  h1 {
+    font-size: 40px;
+    font-weight: bold;
+  }
+  @include servicesContainer($backgroundColor: white, $height: auto);
+}
+.servicesContainer {
+  $title-width: 400px;
+  padding-top: 20px;
+  @include servicesGrid;
+  div {
+    @include servicesGridElement;
+  }
+  p {
+    @include globalTexts();
+    padding-top: 10px;
+    padding-bottom: 30px;
+  }
+  .titleBackground1 {
+    background-color: #65aecf;
+    width: $title-width;
+    border-radius: 30px;
+  }
+  .titleBackground2 {
+    background-color: #ffad65;
+    width: $title-width;
+    border-radius: 30px;
+  }
+
 }
 </style>
 
