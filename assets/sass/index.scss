@@ -1,0 +1,46 @@
+/* Styles aplicable only for index page */
+
+@mixin servicesContainer($backgroundColor, $height){
+    background-color: $backgroundColor;
+    height: $height;
+    width: 100%;
+    padding: 0px 100px 20px 100px;
+}
+@mixin servicesGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap:20px;
+    justify-content: center;
+    align-content: center;
+    padding: 0px 100px 0px 100px;
+}
+
+@mixin servicesGridElement{
+    display: flex;
+    flex-direction: column;
+    padding-top: 15px;
+    justify-items: center;
+    align-items: center;
+    button{
+        color: $darkColor;
+        text-align: center;
+        @include goToButton();
+    }
+}
+
+@mixin goToButton{
+    width: 250px;
+    padding: 10px 20px, 10px, 30px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: $secundaryColor;
+    transition: 0.2s;
+    &:hover{
+        background-color: $darkColor;
+        color: $clearColor;
+        a{
+            color: $clearColor;
+        }
+    }
+}
+
